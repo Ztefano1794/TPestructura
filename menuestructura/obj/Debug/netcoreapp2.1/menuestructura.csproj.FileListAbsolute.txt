@@ -1,0 +1,11 @@
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\bin\Debug\netcoreapp2.1\menuestructura.deps.json
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\bin\Debug\netcoreapp2.1\menuestructura.runtimeconfig.json
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\bin\Debug\netcoreapp2.1\menuestructura.runtimeconfig.dev.json
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\bin\Debug\netcoreapp2.1\menuestructura.dll
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\bin\Debug\netcoreapp2.1\menuestructura.pdb
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\obj\Debug\netcoreapp2.1\menuestructura.csprojAssemblyReference.cache
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\obj\Debug\netcoreapp2.1\menuestructura.csproj.CoreCompileInputs.cache
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\obj\Debug\netcoreapp2.1\menuestructura.AssemblyInfoInputs.cache
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\obj\Debug\netcoreapp2.1\menuestructura.AssemblyInfo.cs
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\obj\Debug\netcoreapp2.1\menuestructura.dll
+C:\Users\djuarez\Documents\damian\menuestructura\menuestructura\menuestructura\obj\Debug\netcoreapp2.1\menuestructura.pdb
