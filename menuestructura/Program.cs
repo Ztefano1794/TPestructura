@@ -1,6 +1,8 @@
-﻿using System;
+using System;
+using System.Collections;
+using System.Linq;
 
-namespace TipoMenu
+namespace Prueba
 {
     class Program
     {
@@ -11,6 +13,7 @@ namespace TipoMenu
             {
                 showMenu = MainMenu();
             }
+            Console.ReadLine();
         }
 
         private static bool MainMenu()
@@ -19,52 +22,96 @@ namespace TipoMenu
             Console.WriteLine("Seleccione una de las opciones:");
             Console.WriteLine("1) Invertir lo escrito");
             Console.WriteLine("2) Eliminar los espacios");
-            Console.WriteLine("3) Salir del programa");
-            Console.Write("\r\nSelecciones una de las opciones: ");
+            Console.WriteLine("3) Averiguar si es palindromo");
+            Console.WriteLine("4) Salir del programa");
+            Console.Write("Seleccione una de las opciones: ");
 
             switch (Console.ReadLine())
             {
                 case "1":
-                    ReverseString();
+                    InvertirOracion();
                     return true;
                 case "2":
-                    RemoveWhitespace();
+                    EliminarEspacios();
                     return true;
                 case "3":
+                    EsPalindromo();
+                    return true;
+                case "4":
                     return false;
                 default:
                     return true;
             }
         }
 
-        private static string CaptureInput()
+       
+
+        private static void EliminarEspacios()
+        {
+            Console.Clear();
+            Console.WriteLine("Elimine los espacios");
+
+            MostrarResultado(CapturarOracion().Replace(" ", ""));
+        }
+
+        private static void MostrarResultado(string message)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Su oracion modificada es: {0}", message);
+            Console.WriteLine();
+            Console.WriteLine("Presione enter para volver al menu");
+            Console.ReadLine();
+        }
+
+        private static string CapturarOracion()
         {
             Console.Write("Ingrese la oracion: ");
             return Console.ReadLine();
         }
 
-        private static void ReverseString()
+        private static void InvertirOracion()
         {
             Console.Clear();
             Console.WriteLine("Invertir la oracion");
 
-            char[] charArray = CaptureInput().ToCharArray();
+            char[] charArray = CapturarOracion().ToCharArray();
             Array.Reverse(charArray);
-            DisplayResult(String.Concat(charArray));
+            MostrarResultado(String.Concat(charArray));
         }
 
-        private static void RemoveWhitespace()
+        private static void EsPalindromo()
         {
             Console.Clear();
-            Console.WriteLine("Elimine los espacios");
+            Console.WriteLine("¿Es Palindromo?");
 
-            DisplayResult(CaptureInput().Replace(" ", ""));
-        }
+            string palabra = CapturarOracion();
+            //string reverso = string.Empty;
+            
+            char[] charPalabra = palabra.ToCharArray();
+            Array.Reverse(charPalabra);
 
-        private static void DisplayResult(string message)
-        {
-            Console.WriteLine($"\r\nSu oracion modificada es: {message}");
-            Console.Write("\r\nPresione enter para volver al menu");
+            //Console.Write("{0}", String.Concat(charPalabra));
+
+            if (palabra.Equals(String.Concat(charPalabra)))
+            {
+                Console.WriteLine();
+                Console.WriteLine("Su oracion modificada es: {0}", String.Concat(charPalabra));
+                Console.WriteLine();
+                Console.WriteLine("Es palindromo");
+                Console.WriteLine();
+                Console.WriteLine("Presione enter para volver al menu");
+                           
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Su oracion modificada es: {0}", String.Concat(charPalabra));
+                Console.WriteLine();
+                Console.WriteLine("No es palindromo");
+                Console.WriteLine();
+                Console.WriteLine("Presione enter para volver al menu");
+                
+            }                            
             Console.ReadLine();
         }
     }
